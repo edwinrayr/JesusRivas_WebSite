@@ -1,32 +1,27 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Menú móvil
-  const toggle = document.querySelector(".nav-toggle");
+(() => {
+  // Mobile nav
+  const btn = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav");
-
-  const setOpen = (open) => {
-    toggle.classList.toggle("is-open", open);
-    nav.classList.toggle("is-open", open);
-    toggle.setAttribute("aria-expanded", String(open));
-    toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+  const setExpanded = (isOpen) => {
+    btn?.setAttribute("aria-expanded", String(isOpen));
+    nav?.classList.toggle("is-open", isOpen);
   };
+  btn?.addEventListener("click", () => setExpanded(!nav.classList.contains("is-open")));
+  nav?.addEventListener("click", (e) => { if (e.target.closest("a")) setExpanded(false); });
+  document.addEventListener("click", (e) => {
+    if (!nav?.classList.contains("is-open")) return;
+    if (e.target.closest(".nav") || e.target.closest(".nav-toggle")) return;
+    setExpanded(false);
+  });
 
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => setOpen(!nav.classList.contains("is-open")));
-    nav.addEventListener("click", (e) => {
-      if (!e.target.closest("a")) return;
-      if (window.matchMedia("(max-width: 860px)").matches) setOpen(false);
-    });
-  }
-
-  // Demo submit
+  // Fake submit (frontend only)
   const form = document.getElementById("contactForm");
-  const hint = document.getElementById("formHint");
+  const note = document.getElementById("formNote");
+  if (!form || !note) return;
 
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      if (hint) hint.textContent = "✅ Mensaje listo (demo). Conecta un backend o EmailJS para envío real.";
-      form.reset();
-    });
-  }
-});
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    note.textContent = "✅ Mensaje enviado (demo). Si quieres, lo conectamos a correo/WhatsApp.";
+    form.reset();
+  });
+})();

@@ -1,22 +1,24 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.querySelector(".nav-toggle");
+(() => {
+  const btn = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav");
+  if (!btn || !nav) return;
 
-  if (!toggle || !nav) return;
-
-  const setOpen = (open) => {
-    toggle.classList.toggle("is-open", open);
-    nav.classList.toggle("is-open", open);
-    toggle.setAttribute("aria-expanded", String(open));
-    toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+  const setExpanded = (isOpen) => {
+    btn.setAttribute("aria-expanded", String(isOpen));
+    nav.classList.toggle("is-open", isOpen);
   };
 
-  toggle.addEventListener("click", () => {
-    setOpen(!nav.classList.contains("is-open"));
+  btn.addEventListener("click", () => {
+    setExpanded(!nav.classList.contains("is-open"));
   });
 
   nav.addEventListener("click", (e) => {
-    if (!e.target.closest("a")) return;
-    if (window.matchMedia("(max-width: 860px)").matches) setOpen(false);
+    if (e.target.closest("a")) setExpanded(false);
   });
-});
+
+  document.addEventListener("click", (e) => {
+    if (!nav.classList.contains("is-open")) return;
+    if (e.target.closest(".nav") || e.target.closest(".nav-toggle")) return;
+    setExpanded(false);
+  });
+})();

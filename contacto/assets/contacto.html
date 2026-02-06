@@ -4,15 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jesús Rivas — Contacto</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=DM+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ✅ dentro de /assets -->
   <link rel="stylesheet" href="css/contacto.css" />
 </head>
 <body>
 
   <header class="site-header">
-    <div class="header__inner">
+    <div class="container header__inner">
       <a class="brand" href="../../jesusrivas_inicio/index.html">
         <span class="brand__dot" aria-hidden="true"></span>
         <span class="brand__text">Jesús Rivas</span>
@@ -24,7 +27,7 @@
 
       <nav class="nav" aria-label="Navegación principal">
         <a class="nav__link" href="../../jesusrivas_inicio/index.html">Inicio</a>
-        <a class="nav__link" href="../../sobremi/sobremi.html">Sobre mí</a>
+        <a class="nav__link" href="../../sobremi/assets/sobremi.html">Sobre mí</a>
         <a class="nav__link" href="../../libros/libros.html">Libros</a>
         <a class="nav__link is-active" href="contacto.html">Contacto</a>
       </nav>
@@ -32,61 +35,48 @@
   </header>
 
   <main class="page">
-    <section class="contact" aria-label="Contacto">
-      <div class="container contact__grid">
+    <section class="container">
+      <div class="section-head">
+        <h1 class="page-title">Contacto</h1>
+        <p class="page-desc">Cuéntame sobre tu proyecto. Respondo lo antes posible.</p>
+      </div>
 
-        <div class="contact__content">
-          <h1 class="page-title">Contacto</h1>
-          <p class="lead">
-            ¿Quieres una conferencia, mentoría o consultoría? Escríbeme y coordinamos.
-          </p>
-
-          <div class="contact__cards">
-            <a class="info-card" href="mailto:tu_correo@dominio.com">
-              <span class="info-card__label">Email</span>
-              <span class="info-card__value">tu_correo@dominio.com</span>
-            </a>
-
-            <a class="info-card" href="https://wa.me/5210000000000" target="_blank" rel="noopener">
-              <span class="info-card__label">WhatsApp</span>
-              <span class="info-card__value">+52 1 000 000 0000</span>
-            </a>
-
-            <div class="info-card">
-              <span class="info-card__label">Ubicación</span>
-              <span class="info-card__value">Latinoamérica</span>
-            </div>
-          </div>
-
-          <div class="chips">
-            <span class="chip">Nube híbrida</span>
-            <span class="chip">Multicloud</span>
-            <span class="chip chip--accent">FinOps</span>
-          </div>
-        </div>
-
-        <form class="form" id="contactForm" autocomplete="on">
-          <h2>Envíame un mensaje</h2>
-
-          <label class="field">
-            <span>Nombre</span>
-            <input type="text" name="name" placeholder="Tu nombre" required>
+      <div class="contact-grid">
+        <form class="card form" id="contactForm">
+          <label>
+            Nombre
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
           </label>
 
-          <label class="field">
-            <span>Email</span>
-            <input type="email" name="email" placeholder="tu@email.com" required>
+          <label>
+            Correo
+            <input type="email" name="correo" placeholder="tucorreo@dominio.com" required>
           </label>
 
-          <label class="field">
-            <span>Mensaje</span>
-            <textarea name="message" rows="5" placeholder="Cuéntame qué necesitas..." required></textarea>
+          <label>
+            Mensaje
+            <textarea name="mensaje" rows="6" placeholder="¿En qué puedo ayudarte?" required></textarea>
           </label>
 
           <button class="btn btn--primary" type="submit">Enviar</button>
-          <p class="hint" id="formHint">* Esto es un demo front-end (no envía a servidor).</p>
+          <p class="form-note" id="formNote" aria-live="polite"></p>
         </form>
 
+        <aside class="card info">
+          <h2>Canales</h2>
+          <p class="muted">También puedes escribirme por:</p>
+
+          <div class="info-list">
+            <a class="info-link" href="#" aria-label="WhatsApp">WhatsApp</a>
+            <a class="info-link" href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a class="info-link" href="#" aria-label="Correo">Correo</a>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3>Horario</h3>
+          <p class="muted">Lun–Vie · 9:00–18:00</p>
+        </aside>
       </div>
     </section>
   </main>
@@ -94,7 +84,7 @@
   <footer class="footer">
     <div class="container footer__inner">
       <p class="footer__copy">© 2026 Jesús Rivas. Todos los derechos reservados.</p>
-      <a class="footer__link" href="../../jesusrivas_inicio/index.html">Volver a Inicio</a>
+      <a class="footer__link" href="../../jesusrivas_inicio/index.html">Inicio</a>
     </div>
   </footer>
 

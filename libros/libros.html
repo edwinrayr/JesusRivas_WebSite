@@ -4,15 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jesús Rivas — Libros</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=DM+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/libros.css" />
 </head>
 <body>
 
   <header class="site-header">
-    <div class="header__inner">
+    <div class="container header__inner">
       <a class="brand" href="../jesusrivas_inicio/index.html">
         <span class="brand__dot" aria-hidden="true"></span>
         <span class="brand__text">Jesús Rivas</span>
@@ -24,7 +26,7 @@
 
       <nav class="nav" aria-label="Navegación principal">
         <a class="nav__link" href="../jesusrivas_inicio/index.html">Inicio</a>
-        <a class="nav__link" href="../sobremi/sobremi.html">Sobre mí</a>
+        <a class="nav__link" href="../sobremi/assets/sobremi.html">Sobre mí</a>
         <a class="nav__link is-active" href="libros.html">Libros</a>
         <a class="nav__link" href="../contacto/assets/contacto.html">Contacto</a>
       </nav>
@@ -32,73 +34,49 @@
   </header>
 
   <main class="page">
-    <section class="books" aria-label="Libros">
-      <div class="container">
-        <div class="section-head">
-          <h1 class="page-title">Libros</h1>
-          <p class="section-desc">
-            Ideas prácticas para emprender, liderar y crecer en negocios digitales.
-          </p>
-        </div>
+    <section class="container">
+      <div class="section-head">
+        <h1 class="page-title">Libros</h1>
+        <p class="page-desc">Ideas prácticas sobre negocios digitales, liderazgo y ejecución.</p>
+      </div>
 
-        <div class="books__grid">
-          <article class="book" data-title="El que tenga tienda, que la atienda">
-            <div class="book__cover">
-              <img src="assets/img/libro1.webp" alt="Libro 1" loading="lazy">
-              <span class="tag">Recomendado</span>
-            </div>
-            <div class="book__body">
-              <h2>El que tenga tienda, que la atienda</h2>
-              <p>
-                Guía directa para mejorar tu operación diaria, tomar decisiones con claridad
-                y construir disciplina empresarial.
-              </p>
-              <button class="btn btn--primary book__btn" type="button">Ver portada</button>
-            </div>
-          </article>
+      <div class="books-grid">
+        <article class="book-card" data-title="El que tenga tienda, que la atienda" data-desc="Estrategias prácticas para operar, vender y crecer con disciplina.">
+          <div class="book-img">
+            <img src="assets/img/libro1.webp" alt="Libro 1">
+          </div>
+          <h2>El que tenga tienda, que la atienda</h2>
+          <p>Estrategias prácticas para operar, vender y crecer con disciplina.</p>
+          <button class="btn btn--primary" type="button">Ver portada</button>
+        </article>
 
-          <article class="book" data-title="El que tenga tienda, que no la pierda">
-            <div class="book__cover">
-              <img src="assets/img/libro2.png" alt="Libro 2" loading="lazy">
-              <span class="tag tag--alt">Negocios</span>
-            </div>
-            <div class="book__body">
-              <h2>El que tenga tienda, que no la pierda</h2>
-              <p>
-                Estrategias para proteger tu crecimiento, optimizar recursos
-                y escalar con procesos sólidos.
-              </p>
-              <button class="btn btn--primary book__btn" type="button">Ver portada</button>
-            </div>
-          </article>
+        <article class="book-card" data-title="Negocios digitales sin excusas" data-desc="Procesos, sistemas y enfoque para escalar sin perder control.">
+          <div class="book-img">
+            <img src="assets/img/libro2.png" alt="Libro 2">
+          </div>
+          <h2>Negocios digitales sin excusas</h2>
+          <p>Procesos, sistemas y enfoque para escalar sin perder control.</p>
+          <button class="btn btn--primary" type="button">Ver portada</button>
+        </article>
 
-          <article class="book" data-title="Próximamente">
-            <div class="book__cover">
-              <img src="assets/img/libro3.png" alt="Libro 3" loading="lazy">
-              <span class="tag tag--soon">Próximo</span>
-            </div>
-            <div class="book__body">
-              <h2>Próximamente</h2>
-              <p>
-                Un nuevo libro enfocado en liderazgo, transformación digital
-                y ejecución en entornos competitivos.
-              </p>
-              <button class="btn btn--ghost book__btn" type="button">Ver portada</button>
-            </div>
-          </article>
-        </div>
-
+        <article class="book-card" data-title="Próximamente" data-desc="Nuevo libro en desarrollo. Mantente atento.">
+          <div class="book-img">
+            <img src="assets/img/libro3.png" alt="Libro 3">
+          </div>
+          <h2>Próximamente</h2>
+          <p>Nuevo libro en desarrollo. Mantente atento.</p>
+          <button class="btn btn--ghost" type="button">Vista previa</button>
+        </article>
       </div>
     </section>
 
     <!-- Lightbox -->
     <div class="overlay" aria-hidden="true"></div>
-    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada">
-      <button class="close" aria-label="Cerrar">
-        ✕
-      </button>
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Vista de libro">
+      <button class="lightbox__close" aria-label="Cerrar">✕</button>
       <img class="lightbox__img" src="" alt="">
-      <p class="lightbox__title"></p>
+      <h3 class="lightbox__title"></h3>
+      <p class="lightbox__desc"></p>
     </div>
 
   </main>
