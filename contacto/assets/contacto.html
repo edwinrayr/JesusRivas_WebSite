@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jesús Rivas — Contacto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=DM+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/contacto.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header__inner">
+      <a class="brand" href="../../jesusrivas_inicio/index.html">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Jesús Rivas</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav__link" href="../../jesusrivas_inicio/index.html">Inicio</a>
+        <a class="nav__link" href="../../sobremi/sobremi.html">Sobre mí</a>
+        <a class="nav__link" href="../../libros/libros.html">Libros</a>
+        <a class="nav__link is-active" href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="contact" aria-label="Contacto">
+      <div class="container contact__grid">
+
+        <div class="contact__content">
+          <h1 class="page-title">Contacto</h1>
+          <p class="lead">
+            ¿Quieres una conferencia, mentoría o consultoría? Escríbeme y coordinamos.
+          </p>
+
+          <div class="contact__cards">
+            <a class="info-card" href="mailto:tu_correo@dominio.com">
+              <span class="info-card__label">Email</span>
+              <span class="info-card__value">tu_correo@dominio.com</span>
+            </a>
+
+            <a class="info-card" href="https://wa.me/5210000000000" target="_blank" rel="noopener">
+              <span class="info-card__label">WhatsApp</span>
+              <span class="info-card__value">+52 1 000 000 0000</span>
+            </a>
+
+            <div class="info-card">
+              <span class="info-card__label">Ubicación</span>
+              <span class="info-card__value">Latinoamérica</span>
+            </div>
+          </div>
+
+          <div class="chips">
+            <span class="chip">Nube híbrida</span>
+            <span class="chip">Multicloud</span>
+            <span class="chip chip--accent">FinOps</span>
+          </div>
+        </div>
+
+        <form class="form" id="contactForm" autocomplete="on">
+          <h2>Envíame un mensaje</h2>
+
+          <label class="field">
+            <span>Nombre</span>
+            <input type="text" name="name" placeholder="Tu nombre" required>
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" placeholder="tu@email.com" required>
+          </label>
+
+          <label class="field">
+            <span>Mensaje</span>
+            <textarea name="message" rows="5" placeholder="Cuéntame qué necesitas..." required></textarea>
+          </label>
+
+          <button class="btn btn--primary" type="submit">Enviar</button>
+          <p class="hint" id="formHint">* Esto es un demo front-end (no envía a servidor).</p>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© 2026 Jesús Rivas. Todos los derechos reservados.</p>
+      <a class="footer__link" href="../../jesusrivas_inicio/index.html">Volver a Inicio</a>
+    </div>
+  </footer>
+
+  <script src="js/contacto.js"></script>
+</body>
+</html>

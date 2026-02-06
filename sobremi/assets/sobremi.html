@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jesús Rivas — Sobre mí</title>
+
+  <!-- ✅ SOLO CSS en el head -->
+  <link rel="stylesheet" href="assets/css/sobremi.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header__inner">
+      <a class="brand" href="../jesusrivas_inicio/index.html">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Jesús Rivas</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav__link" href="../jesusrivas_inicio/index.html">Inicio</a>
+        <a class="nav__link is-active" href="sobremi.html">Sobre mí</a>
+        <a class="nav__link" href="../libros/libros.html">Libros</a>
+        <a class="nav__link" href="../contacto/assets/contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="about-hero" aria-label="Sobre mí">
+      <div class="container about-hero__grid">
+        <div class="about-hero__content">
+          <h1 class="page-title">Sobre mí</h1>
+          <p class="lead">
+            Autor, empresario y conferencista innovador y visionario en el mundo de los negocios digitales, con una trayectoria marcada por la transformación del sector B2B. Como cofundador de dos grupos empresariales de renombre, he revolucionado la manera en que las empresas operan y se comunican.
+          </p>
+          <div class="chips">
+            <span class="chip">Empresario</span>
+            <span class="chip">Autor</span>
+            <span class="chip chip--accent">Conferencista</span>
+            <span class="chip">B2B</span>
+          </div>
+
+          <a class="btn btn--primary" href="../contacto/assets/contacto.html">Hablemos</a>
+        </div>
+
+        <!-- ✅ LA IMAGEN VA EN EL BODY, AQUÍ ESTÁ PERFECTO -->
+        <figure class="about-hero__img">
+          <div class="img-frame">
+            <img src="assets/img/jesusalexis.png" alt="Jesús Rivas" loading="eager">
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="content" aria-label="Trayectoria">
+      <div class="container content__grid">
+        <article class="card">
+          <h2>Formación y enfoque</h2>
+          <p>
+            Licenciado en Ciencias de la Computación por la Universidad Central de Venezuela, he combinado mi pasión por la tecnología con los negocios. Mi enfoque ha sido ayudar a clientes a duplicar sus ingresos mediante soluciones de software avanzadas y reconocidas a nivel global.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Liderazgo humanista</h2>
+          <p>
+            Como empresario, mi enfoque va más allá de simplemente alcanzar el éxito empresarial. Mi compromiso se centra en transformar y elevar el mundo digital a través de un liderazgo visionario y humanista. Con una trayectoria marcada por la innovación y la dedicación, me especializo en guiar a emprendedores y líderes empresariales hacia el éxito en el mundo digital.
+          </p>
+        </article>
+
+        <article class="card card--wide">
+          <h2>Transformación B2B</h2>
+          <p>
+            Transformo la manera en que las empresas operan y se comunican en el sector B2B como cofundador de dos grupos empresariales de renombre. <strong>Fusiono la tecnología con los negocios</strong> para ayudar a mis clientes a duplicar sus ingresos a través de soluciones de software innovadoras.
+          </p>
+          <a class="btn btn--ghost" href="../libros/libros.html">Ver libros</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© 2026 Jesús Rivas. Todos los derechos reservados.</p>
+      <a class="footer__link" href="../contacto/assets/contacto.html">Contacto</a>
+    </div>
+  </footer>
+
+  <!-- ✅ EL JS SIEMPRE AL FINAL -->
+  <script src="assets/js/sobremi.js"></script>
+</body>
+</html>

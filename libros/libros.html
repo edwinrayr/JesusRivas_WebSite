@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jesús Rivas — Libros</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=DM+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/libros.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header__inner">
+      <a class="brand" href="../jesusrivas_inicio/index.html">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Jesús Rivas</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav__link" href="../jesusrivas_inicio/index.html">Inicio</a>
+        <a class="nav__link" href="../sobremi/sobremi.html">Sobre mí</a>
+        <a class="nav__link is-active" href="libros.html">Libros</a>
+        <a class="nav__link" href="../contacto/assets/contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="books" aria-label="Libros">
+      <div class="container">
+        <div class="section-head">
+          <h1 class="page-title">Libros</h1>
+          <p class="section-desc">
+            Ideas prácticas para emprender, liderar y crecer en negocios digitales.
+          </p>
+        </div>
+
+        <div class="books__grid">
+          <article class="book" data-title="El que tenga tienda, que la atienda">
+            <div class="book__cover">
+              <img src="assets/img/libro1.webp" alt="Libro 1" loading="lazy">
+              <span class="tag">Recomendado</span>
+            </div>
+            <div class="book__body">
+              <h2>El que tenga tienda, que la atienda</h2>
+              <p>
+                Guía directa para mejorar tu operación diaria, tomar decisiones con claridad
+                y construir disciplina empresarial.
+              </p>
+              <button class="btn btn--primary book__btn" type="button">Ver portada</button>
+            </div>
+          </article>
+
+          <article class="book" data-title="El que tenga tienda, que no la pierda">
+            <div class="book__cover">
+              <img src="assets/img/libro2.png" alt="Libro 2" loading="lazy">
+              <span class="tag tag--alt">Negocios</span>
+            </div>
+            <div class="book__body">
+              <h2>El que tenga tienda, que no la pierda</h2>
+              <p>
+                Estrategias para proteger tu crecimiento, optimizar recursos
+                y escalar con procesos sólidos.
+              </p>
+              <button class="btn btn--primary book__btn" type="button">Ver portada</button>
+            </div>
+          </article>
+
+          <article class="book" data-title="Próximamente">
+            <div class="book__cover">
+              <img src="assets/img/libro3.png" alt="Libro 3" loading="lazy">
+              <span class="tag tag--soon">Próximo</span>
+            </div>
+            <div class="book__body">
+              <h2>Próximamente</h2>
+              <p>
+                Un nuevo libro enfocado en liderazgo, transformación digital
+                y ejecución en entornos competitivos.
+              </p>
+              <button class="btn btn--ghost book__btn" type="button">Ver portada</button>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="overlay" aria-hidden="true"></div>
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+      <button class="close" aria-label="Cerrar">
+        ✕
+      </button>
+      <img class="lightbox__img" src="" alt="">
+      <p class="lightbox__title"></p>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© 2026 Jesús Rivas. Todos los derechos reservados.</p>
+      <a class="footer__link" href="../contacto/assets/contacto.html">Contacto</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/libros.js"></script>
+</body>
+</html>
